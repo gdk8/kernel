@@ -1,0 +1,7 @@
+# SPDX-License-Identifier: GPL-2.0
+config NDB
+	tristate "Nano Debugger beacon module for symbolic support"
+	default y
+	help
+	  Say Y here if you want to debug Linux kernel at source level.
+

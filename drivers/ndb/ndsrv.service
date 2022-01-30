@@ -1,0 +1,18 @@
+[Unit]
+Description=NanoDbg_Transmitter
+#After=syslog.target
+
+[Service]
+ExecStart=/opt/gedu/gdk/ndsrv
+# Requires systemd version 211 or newer
+User=root
+Group=root
+RuntimeDirectory=/opt/gedu/gdk
+Restart=always
+KillSignal=SIGQUIT
+Type=simple
+StandardError=syslog
+NotifyAccess=all
+
+[Install]
+WantedBy=multi-user.target
